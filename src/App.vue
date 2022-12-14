@@ -1,11 +1,14 @@
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppHeader from './components/AppHeader.vue'
 
 // import store
 import { store } from './store.js'
 
 export default {
   name: "App",
+  components: {
+    AppHeader
+  },
     data() {
       return {
         store,
@@ -15,8 +18,7 @@ export default {
 </script>
 
 <template>
-  
-  <HelloWorld msg="Vite + Vue" />
+  <AppHeader :msg="store.titolo" />
 </template>
 
 <style lang="scss">
