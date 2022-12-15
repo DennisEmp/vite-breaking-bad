@@ -10,6 +10,23 @@
 body {
     font-family: $main-font;
     color: $text-color;
-    background-image: linear-gradient(to left,transparent 0px,transparent 20px, rgba(#000, 0.02) 20px, rgba(#000, 0.02) 40px)linear-gradient(to bottom,transparent 0px,transparent 20px, rgba(#000, 0.02) 20px, rgba(#000, 0.02) 40px);;
+    background:
+        linear-gradeint(to right,
+          hsl(330, 100%, 96.08%) 0%,
+          hsl(325.52, 83.62%, 95.79%) 7%,
+          hsl(319.81, 69.13%, 95.5%) 14%,
+          hsl(312.25, 56.22%, 95.21%) 21.1%,
+          hsl(301.75, 44.61%, 94.91%) 28.1%,
+          hsl(288.74, 45.59%, 95.03%) 35%,
+          hsl(276.12, 48.69%, 95.22%) 42%,
+          hsl(263.91, 52.08%, 95.41%) 48.8%,
+          hsl(252.06, 55.83%, 95.6%) 55.6%,
+          hsl(240.52, 59.98%, 95.79%) 62.4%,
+          hsl(230.88, 68.3%, 95.53%) 69%,
+          hsl(224.03, 75.96%, 95.23%) 75.5%,
+          hsl(218.89, 82.88%, 94.93%) 81.8%,
+          hsl(214.88, 89.14%, 94.61%) 88%,
+          hsl(211.67, 94.83%, 94.27%) 94.1%,
+          hsl(209.03, 100%, 93.92%) 100%);
     background-size: 40px, 100% 40px;
 }

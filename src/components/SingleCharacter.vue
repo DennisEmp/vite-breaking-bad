@@ -2,17 +2,17 @@
 
 export default {
     name: "SingleCharacter",
-   props: []
+   props: ["info"]
 }
 </script>
 
 <template>
     <!-- template di card singola -->
     <div class="character text-center">
-        <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="abc">
-        <h4>nome</h4>
-        <div>stato</div>
-        <div class="font-weight-bold">specie</div>
+        <img :src="info.image" alt="">
+        <h4 class="mt-3"> {{ info.name }} </h4>
+        <div> {{ info.status }} </div>
+        <div class="font-weight-bold"> {{ info.species }} </div>
     </div>
 </template>
 <style lang="scss" scoped>
@@ -33,6 +33,9 @@ h4 {
 img {
     border-radius: 50%;
     box-shadow: 0 0 6px 3px rgba(#000, 0.15);
+}
+h4 {
+    font-weight: 700;
 }
 
 </style>
