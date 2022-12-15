@@ -1,8 +1,8 @@
 <script>
 import axios from 'axios';
-import { onMounted } from 'vue';
 import AppHeader from './components/AppHeader.vue'
 import CharacterList from './components/CharacterList.vue'
+import AppSearch from './components/AppSearch.vue'
 
 // import store
 import { store } from './store.js'
@@ -11,7 +11,8 @@ export default {
   name: "App",
   components: {
     AppHeader,
-    CharacterList
+    CharacterList,
+    AppSearch
 },
     data() {
       return {
@@ -21,8 +22,14 @@ export default {
     methods: {
       getCHaracters(){
 
+        let myUrl = store.apiURL;
+
+        if(store.searchText !== "") {
+          myUrl += `?${store.apiNameParameter}=${store.searchText}`;
+        }
+
         axios
-      .get(store.apiURL)
+      .get(myUrl)
       .then(res => {
         store.CharacterList = res.data.results
       })
@@ -40,6 +47,7 @@ export default {
 <template>
   <AppHeader :msg="store.titolo" />
   <main>
+    <AppSearch @search="getCHaracters"/>
     <CharacterList />
   </main>
 </template>
